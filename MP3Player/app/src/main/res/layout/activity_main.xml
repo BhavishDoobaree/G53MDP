@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bhavishdoobaree.mp3player.MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/trackList"
+            style="@android:style/Widget.DeviceDefault.ExpandableListView"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/trackTitle"
+            android:textAlignment="center"
+            android:textStyle="normal|bold"
+            android:background="?android:attr/colorButtonNormal"
+            android:paddingTop="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/currentArtist"
+            android:textAlignment="center"
+            android:background="?android:attr/colorButtonNormal"
+            android:paddingBottom="10dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/colorButtonNormal">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:id="@+id/timeProgressed"
+                android:textAlignment="center"
+                android:text="00:00"
+                android:textSize="12sp"
+                android:layout_width="40dp"
+                android:layout_marginLeft="10dp" />
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:id="@+id/timeTotal"
+                android:layout_marginRight="10dp"
+                android:textAlignment="center"
+                android:text="00:00"
+                android:textSize="12sp"
+                android:layout_width="40dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:id="@+id/musicControls"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/colorButtonNormal"
+            android:paddingTop="10dp">
+
+            <Button
+                android:id="@+id/pauseTrackButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="pauseButtonPlayer"
+                android:text="Pause" />
+
+            <Button
+                android:id="@+id/PlayButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="playButtonPlayer"
+                android:text="Play" />
+
+            <Button
+                android:id="@+id/stopTrackButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="stopButtonPlayer"
+                android:text="Stop" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
+
