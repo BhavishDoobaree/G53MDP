@@ -19,3 +19,5 @@ Projects:</br>
 -MP3Player</br>
 -RecipeBook</br>
 
+License: The Unlicense
+
