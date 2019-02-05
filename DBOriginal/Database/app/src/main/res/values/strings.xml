@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Database</string>
+    <string name="textview">TextView</string>
+    <string name="productID">TextView</string>
+    <string name="product_name">Product Name</string>
+    <string name="product_quantity">Product Quantity</string>
+</resources>
